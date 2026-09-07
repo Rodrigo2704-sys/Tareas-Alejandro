@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Técnica - AhorroU</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Fondo creativo y llamativo tipo "Mesh Gradient" con alta presencia de verde profesional */
+            background-color: #022c22;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.4) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(5, 150, 105, 0.35) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(4, 120, 87, 0.3) 0px, transparent 70%),
+                linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
+            background-attachment: fixed;
+            color: #1e293b;
+            margin: 0;
+            padding: 30px;
+            min-height: 100vh;
+        }
+
+        .sheet {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(52, 211, 153, 0.4);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Línea superior luminosa para destacar ante el profesor */
+        .sheet::before {
+            content: '';
+            display: block;
+            height: 8px;
+            background: linear-gradient(90deg, #10b981, #34d399, #059669, #6ee7b7);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+            padding: 30px;
+            border-bottom: 3px solid #10b981;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 800;
+            color: #064e3b;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .content {
+            padding: 30px;
+            background: #f8fafc;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #047857;
+            font-weight: 800;
+            margin: 30px 0 12px 0;
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 15px;
+        }
+
+        .grid-container.full-width {
+            grid-template-columns: 1fr;
+        }
+
+        .card-box {
+            background: #ffffff;
+            border: 2px solid #a7f3d0;
+            border-left: 2px solid #059669;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.05);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card-box:hover {
+            transform: translateY(-2px);
+            border-color: #059669;
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.12);
+        }
+
+        .card-box.span-two {
+            grid-column: span 2;
+        }
+
+        .sub-group-title {
+            grid-column: span 2;
+            background: #ecfdf5;
+            color: #064e3b;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            border: 2px solid #34d399;
+            border-radius: 6px;
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .label {
+            font-size: 11px;
+            font-weight: 800;
+            color: #047857;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .value {
+            font-size: 13px;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        code {
+            background: #ecfdf5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #047857;
+            font-size: 12px;
+            border: 1px solid #34d399;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f1f5f9;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+            border-top: 2px solid #cbd5e1;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .card-box.span-two, .sub-group-title {
+                grid-column: span 1;
+            }
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="sheet">
+    
+    <div class="header">
+        <h1>Ficha Técnica del Software</h1>
+    </div>
+
+    <div class="content">
+        
+        <!-- 1. IDENTIFICACIÓN -->
+        <div class="section-title">1. Producto:</div>
+        <div class="grid-container">
+            <div class="card-box">
+                <div class="label">Nombre del Producto</div>
+                <div class="value">Aplicativo Web de Ahorro y Finanzas para Estudiantes Universitarios </div>
+            </div>
+            <div class="card-box">
+                <div class="label">URL y Versión</div>
+                <div class="value"><code>https://www.ahorrou-app.net</code><br><b>Versión:</b> 1.0</div>
+            </div>
+        </div>
+
+        <!-- 2. DESCRIPCIÓN -->
+        <div class="section-title">2. Descripción del Producto:</div>
+        <div class="grid-container">
+            <div class="card-box">
+                <div class="label">Objetivo y Descripción del producto:</div>
+                <div class="value">Sistema web diseñado para que los estudiantes universitarios gestionen sus finanzas personales, registrando ingresos y gastos diarios para mantener su estabilidad económica </div>
+            </div>
+            <div class="card-box">
+                <div class="label">Beneficio:</div>
+                <div class="value">Fomenta el hábito del ahorro, previene crisis financieras a mitad de semestre y facilita reportes claros de gastos innecesarios.</div>
+            </div>
+        </div>
+
+        <!-- 3. ESPECIFICACIONES TÉCNICAS -->
+        <div class="section-title">3. Especificaciones Técnicas:</div>
+        <div class="grid-container">
+            <div class="sub-group-title">Requisitos del sistema (servidor):</div>
+            <div class="card-box">
+                <div class="label">Hardware</div>
+                <div class="value">Procesador compatible, mínimo 2 GB de RAM y almacenamiento adaptable en nube o local.</div>
+            </div>
+            <div class="card-box">
+                <div class="label">Software y Rendimiento:</div>
+                <div class="value">Servidor web con tiempos de respuesta menores a 2 segundos por consulta.</div>
+            </div>
+            <div class="card-box span-two">
+                <div class="label">Lenguajes de programacion utilizados:</div>
+                <div class="value">Python / JavaScript / SQL</div>
+            </div>
+
+            <div class="sub-group-title">Requisitos del sistema (cliente):</div>
+            <div class="card-box">
+                <div class="label">Hardware:</div>
+                <div class="value">Compatible con cualquier PC, portátil o dispositivo móvil con conexión a red inalámbrica.</div>
+            </div>
+            <div class="card-box">
+                <div class="label">Software Requerido:</div>
+                <div class="value">Navegador web moderno y actualizado como Google Chrome, Firefox, Microsoft Edge, Safari</div>
+            </div>
+        </div>
+
+        <!-- 4. COMPONENTES Y MÓDULOS -->
+        <div class="section-title">4. Componentes y Módulos Principales:</div>
+        <div class="grid-container">
+            <div class="card-box">
+                <div class="label">Módulos del Software:</div>
+                <div class="value">
+                    <ul>
+                        <li><b>Autenticación:</b> Perfiles y seguridad:</li>
+                        <li><b>Registro:</b> Ingresos y egresos (Frontend).</li>
+                        <li><b>Procesamiento:</b> Lógica y balances (Backend).</li>
+                        <li><b>Base de Datos:</b> SQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-box">
+                <div class="label">Accesorios Adicionales:</div>
+                <div class="value">Panel de estadísticas gráficas y opción de exportar los reportes a formato CSV/PDF para análisis financiero avanzado del estudiante.</div>
+            </div>
+        </div>
+
+        <!-- 5. INSTRUCCIONES DE USO Y MONTAJE -->
+        <div class="section-title">5. Instrucciones de Uso y Montaje:</div>
+        <div class="grid-container">
+            <div class="card-box">
+                <div class="label">Guia de instalación:</div>
+                <div class="value">Subir los archivos fuente al servidor web configurado, importar el script SQL de la base de datos y ajustar las variables de conexión.</div>
+            </div>
+            <div class="card-box">
+                <div class="label">Instrucciones de Uso</div>
+                <div class="value">El estudiante ingresa a la plataforma mediante credenciales, registra su capital inicial y actualiza diariamente sus transacciones.</div>
+            </div>
+        </div>
+
+        <!-- 6. ALMACENAMIENTO Y MANTENIMIENTO -->
+        <div class="section-title">6. Almacenamiento y Mantenimiento</div>
+        <div class="grid-container">
+            <div class="card-box">
+                <div class="label">Almacenamiento de Datos</div>
+                <div class="value">Se almacena toda tu información de forma automática y continua en una base de datos SQL. Así, aunque tu computador falle o se borre algo por error, tus datos siempre estarán protegidos y listos para recuperarse en minutos.</div>
+            </div>
+            <div class="card-box">
+                <div class="label">Mantenimiento y Cuidado</div>
+                <div class="value">Cada quince días se reliza una afinación del motor de la base de datos para que tus búsquedas sean rápidas, actualizamos el sistema con las últimas mejoras de seguridad y limpiamos los archivos basura acumulados para mantener el servidor ligero y eficiente</div>
+            </div>
+        </div>
+
+        <!-- 7. NORMAS Y CERTIFICACIONES -->
+        <div class="section-title">7. Normas y Certificaciones</div>
+        <div class="grid-container full-width">
+            <div class="card-box">
+                <div class="value">Desarrollado aplicando buenas prácticas de programación, control de versiones con Git y normas básicas de seguridad web para proteger los datos de los usuarios.</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
