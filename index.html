@@ -5,182 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha Técnica - AhorroU</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Fondo creativo y llamativo tipo "Mesh Gradient" con alta presencia de verde profesional */
-            background-color: #022c22;
-            background-image: 
-                radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.4) 0px, transparent 50%),
-                radial-gradient(at 90% 80%, rgba(5, 150, 105, 0.35) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(4, 120, 87, 0.3) 0px, transparent 70%),
-                linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
-            background-attachment: fixed;
-            color: #1e293b;
-            margin: 0;
-            padding: 30px;
-            min-height: 100vh;
-        }
+      body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la tipografía principal que usará todo el documento */
+    background-color: #022c22; /* Color de respaldo por si el degradado de fondo no carga */
+    background-image: /* Crea un fondo moderno tipo 'Mesh Gradient' combinando luces difuminadas y un degradado lineal */
+        radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.4) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, rgba(5, 150, 105, 0.35) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(4, 120, 87, 0.3) 0px, transparent 70%),
+        linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
+    background-attachment: fixed; /* Mantiene el fondo estático en la pantalla aunque el usuario haga scroll */
+    color: #1e293b; /* Establece el color de texto general por defecto en un gris oscuro legible */
+    margin: 0; /* Elimina los márgenes predeterminados que el navegador le pone al body */
+    padding: 30px; /* Agrega un espacio de relleno alrededor de toda la página */
+    min-height: 100vh; /* Asegura que el cuerpo de la página ocupe al menos toda la altura de la pantalla */
+}
 
-        .sheet {
-            max-width: 950px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(52, 211, 153, 0.4);
-            overflow: hidden;
-            position: relative;
-        }
+.sheet {
+    max-width: 950px; /* Limita el ancho máximo que puede tener la hoja central de la ficha */
+    margin: 0 auto; /* Centra automáticamente la hoja de forma horizontal en la pantalla */
+    background: #ffffff; /* Pinta el fondo de la hoja principal de color blanco puro */
+    border-radius: 16px; /* Redondea las esquinas de la hoja contenedora */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(52, 211, 153, 0.4); /* Añade una sombra profunda y un borde sutil brillante */
+    overflow: hidden; /* Oculta cualquier contenido que se salga de los bordes redondeados */
+    position: relative; /* Permite posicionar elementos hijos de forma absoluta respecto a esta caja */
+}
 
-        /* Línea superior luminosa para destacar ante el profesor */
-        .sheet::before {
-            content: '';
-            display: block;
-            height: 8px;
-            background: linear-gradient(90deg, #10b981, #34d399, #059669, #6ee7b7);
-        }
+.sheet::before {
+    content: ''; /* Crea un elemento vacío obligatorio para que funcione el pseudoelemento */
+    display: block; /* Hace que se comporte como un bloque que ocupa todo el ancho */
+    height: 8px; /* Define el grosor de la barra superior decorativa */
+    background: linear-gradient(90deg, #10b981, #34d399, #059669, #6ee7b7); /* Pinta la barra con un degradado lineal de varios tonos verdes */
+}
 
-        .header {
-            background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
-            padding: 30px;
-            border-bottom: 3px solid #10b981;
-            text-align: center;
-        }
+.header {
+    background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%); /* Coloca un fondo con un degradado verde muy suave en la cabecera */
+    padding: 30px; /* Añade espacio interno alrededor del título de la cabecera */
+    border-bottom: 3px solid #10b981; /* Dibuja una línea divisoria verde fuerte en la parte inferior de la cabecera */
+    text-align: center; /* Centra horizontalmente el texto dentro de la cabecera */
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 800;
-            color: #064e3b;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+.header h1 {
+    margin: 0; /* Elimina los márgenes predeterminados del título */
+    font-size: 24px; /* Define el tamaño de letra grande para el título principal */
+    font-weight: 800; /* Hace que la letra tenga un grosor muy marcado (extragruesa) */
+    color: #064e3b; /* Establece un color verde muy oscuro y elegante para el texto */
+    letter-spacing: 0.5px; /* Separa ligeramente los caracteres para mejorar la estética */
+    text-transform: uppercase; /* Convierte todo el texto del título a mayúsculas */
+}
 
-        .content {
-            padding: 30px;
-            background: #f8fafc;
-        }
+.content {
+    padding: 30px; /* Añade un margen interno para separar el contenido de los bordes de la tarjeta */
+    background: #f8fafc; /* Da un color de fondo gris muy claro y sutil a toda la zona interna */
+}
 
-        .section-title {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #047857;
-            font-weight: 800;
-            margin: 30px 0 12px 0;
-            border-bottom: 2px solid #10b981;
-            padding-bottom: 6px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+.section-title {
+    font-size: 13px; /* Define un tamaño de letra pequeño para los títulos de sección */
+    text-transform: uppercase; /* Fuerza a que el texto aparezca completamente en mayúsculas */
+    letter-spacing: 1px; /* Espacia un poco más las letras para dar estilo de subtítulo técnico */
+    color: #047857; /* Pinta el texto de un tono verde esmeralda llamativo */
+    font-weight: 800; /* Aplica una negrita muy fuerte al texto del título */
+    margin: 30px 0 12px 0; /* Controla la separación exterior (arriba, derecha, abajo, izquierda) */
+    border-bottom: 2px solid #10b981; /* Agrega una línea verde debajo del título de la sección */
+    padding-bottom: 6px; /* Separa el texto de la línea inferior */
+    display: flex; /* Actuelve el modelo flexible para alinear elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos internos del título */
+    gap: 8px; /* Deja un espacio de separación entre los elementos flexibles */
+}
 
-        .section-title:first-child {
-            margin-top: 0;
-        }
+.section-title:first-child {
+    margin-top: 0; /* Quita el margen superior únicamente al primer título de toda la página */
+}
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin-bottom: 15px;
-        }
+.grid-container {
+    display: grid; /* Activa el diseño de cuadrícula (CSS Grid) para organizar las tarjetas */
+    grid-template-columns: repeat(2, 1fr); /* Divide la cuadrícula exactamente en dos columnas iguales */
+    gap: 14px; /* Establece la distancia de separación entre una tarjeta y otra */
+    margin-bottom: 15px; /* Deja un espacio inferior antes de la siguiente sección */
+}
 
-        .grid-container.full-width {
-            grid-template-columns: 1fr;
-        }
+.grid-container.full-width {
+    grid-template-columns: 1fr; /* Modifica la cuadrícula para que use una sola columna que ocupe todo el ancho */
+}
 
-        .card-box {
-            background: #ffffff;
-            border: 2px solid #a7f3d0;
-            border-left: 2px solid #059669;
-            border-radius: 8px;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.05);
-            transition: all 0.2s ease-in-out;
-        }
+.card-box {
+    background: #ffffff; /* Pinta el fondo de cada tarjeta individual de color blanco */
+    border: 2px solid #a7f3d0; /* Dibuja un borde fino de color verde claro alrededor de la tarjeta */
+    border-left: 2px solid #059669; /* Hace que el borde izquierdo sea un poco más oscuro para dar profundidad */
+    border-radius: 8px; /* Redondea levemente las esquinas de la tarjeta */
+    padding: 16px; /* Añade espacio interno para que el texto no pegue de los bordes */
+    display: flex; /* Convierte la tarjeta en un contenedor flexible */
+    flex-direction: column; /* Organiza los elementos internos de arriba hacia abajo (en columna) */
+    justify-content: flex-start; /* Alinea los elementos internos hacia la parte superior */
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.05); /* Aplica una sombra verde muy tenue para darle relieve */
+    transition: all 0.2s ease-in-out; /* Hace que los cambios de diseño al pasar el ratón ocurran de forma fluida */
+}
 
-        .card-box:hover {
-            transform: translateY(-2px);
-            border-color: #059669;
-            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.12);
-        }
+.card-box:hover {
+    transform: translateY(-2px); /* Mueve la tarjeta 2 píxeles hacia arriba al pasar el cursor por encima */
+    border-color: #059669; /* Cambia el color del borde a uno más oscuro cuando el mouse está encima */
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.12); /* Amplía e intensifica la sombra simulando que la tarjeta se eleva */
+}
 
-        .card-box.span-two {
-            grid-column: span 2;
-        }
+.card-box.span-two {
+    grid-column: span 2; /* Hace que una tarjeta específica se estire abarcando las dos columnas de la grilla */
+}
 
-        .sub-group-title {
-            grid-column: span 2;
-            background: #ecfdf5;
-            color: #064e3b;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            padding: 10px 14px;
-            border: 2px solid #34d399;
-            border-radius: 6px;
-            margin-top: 10px;
-            letter-spacing: 0.5px;
-        }
+.sub-group-title {
+    grid-column: span 2; /* Extiende el subtítulo interno para que ocupe las dos columnas de la grilla */
+    background: #ecfdf5; /* Pinta el fondo de un tono verde extremadamente claro */
+    color: #064e3b; /* Cambia el color del texto a un verde muy oscuro */
+    font-size: 12px; /* Define un tamaño de letra pequeño */
+    font-weight: 800; /* Aplica una negrita muy fuerte */
+    text-transform: uppercase; /* Vuelve el texto de los subtítulos completamente en mayúsculas */
+    padding: 10px 14px; /* Añade relleno interno al subtítulo */
+    border: 2px solid #34d399; /* Dibuja un borde verde claro alrededor del subtítulo */
+    border-radius: 6px; /* Redondea las esquinas del cuadro del subtítulo */
+    margin-top: 10px; /* Deja un espacio de separación en la parte superior */
+    letter-spacing: 0.5px; /* Separa ligeramente las letras */
+}
 
-        .label {
-            font-size: 11px;
-            font-weight: 800;
-            color: #047857;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-            letter-spacing: 0.5px;
-        }
+.label {
+    font-size: 11px; /* Define un tamaño de letra muy pequeño para las etiquetas de los campos */
+    font-weight: 800; /* Coloca la etiqueta en negrita fuerte para que destaque */
+    color: #047857; /* Pinta el texto de la etiqueta en color verde esmeralda */
+    text-transform: uppercase; /* Pone la etiqueta completamente en mayúsculas */
+    margin-bottom: 6px; /* Deja un pequeño espacio debajo de la etiqueta antes del valor */
+    letter-spacing: 0.5px; /* Espacia un poco los caracteres de la etiqueta */
+}
 
-        .value {
-            font-size: 13px;
-            color: #1e293b;
-            line-height: 1.5;
-        }
+.value {
+    font-size: 13px; /* Establece un tamaño de letra estándar y cómodo para el texto descriptivo */
+    color: #1e293b; /* Pinta el texto de un color gris oscuro para facilitar la lectura */
+    line-height: 1.5; /* Aumenta la altura entre líneas de texto para que no se vean amontonadas */
+}
 
-        ul {
-            margin: 0;
-            padding-left: 18px;
-        }
+ul {
+    margin: 0; /* Elimina el margen exterior por defecto de las listas */
+    padding-left: 18px; /* Añade un espacio a la izquierda para acomodar las viñetas de la lista */
+}
 
-        li {
-            margin-bottom: 4px;
-        }
+li {
+    margin-bottom: 4px; /* Separa cada elemento de la lista ligeramente del siguiente hacia abajo */
+}
 
-        code {
-            background: #ecfdf5;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #047857;
-            font-size: 12px;
-            border: 1px solid #34d399;
-            font-weight: 600;
-        }
+code {
+    background: #ecfdf5; /* Pinta el fondo del código con un verde muy suave y claro */
+    padding: 3px 8px; /* Añade espacio interno alrededor del texto de código */
+    border-radius: 4px; /* Redondea ligeramente las esquinas de la caja de código */
+    font-family: monospace; /* Cambia la tipografía a una fuente de tipo consola/máquina de escribir */
+    color: #047857; /* Pinta el texto del código en un color verde oscuro */
+    font-size: 12px; /* Define un tamaño de letra ligeramente más pequeño para el código */
+    border: 1px solid #34d399; /* Dibuja un borde fino alrededor del texto de código */
+    font-weight: 600; /* Pone el texto de código semi-negrita para mejor visibilidad */
+}
 
-        .footer {
-            background: #f1f5f9;
-            padding: 15px 30px;
-            text-align: center;
-            font-size: 12px;
-            color: #64748b;
-            border-top: 2px solid #cbd5e1;
-        }
+.footer {
+    background: #f1f5f9; /* Pinta el fondo del pie de página de un color gris claro */
+    padding: 15px 30px; /* Añade espacio interno arriba, abajo y a los lados del pie de página */
+    text-align: center; /* Centra horizontalmente el texto del pie de página */
+    font-size: 12px; /* Define un tamaño de letra pequeño para los datos del pie */
+    color: #64748b; /* Pinta el texto en un gris intermedio suave */
+    border-top: 2px solid #cbd5e1; /* Dibuja una línea divisoria en la parte superior del pie */
+}
 
-        @media (max-width: 768px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
-            .card-box.span-two, .sub-group-title {
-                grid-column: span 1;
-            }
-            body {
-                padding: 15px;
-            }
-        }
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cambia la estructura de dos columnas a una sola cuando la pantalla es pequeña (móvil) */
+    }
+    .card-box.span-two, .sub-group-title {
+        grid-column: span 1; /* Obliga a los elementos que abarcaban dos columnas a ocupar solo una en móviles */
+    }
+    body {
+        padding: 15px; /* Reduce los márgenes exteriores generales de la página para aprovechar la pantalla del celular */
+    }
+}
     </style>
 </head>
 <body>
@@ -285,11 +283,11 @@
         <div class="grid-container">
             <div class="card-box">
                 <div class="label">Almacenamiento de Datos</div>
-                <div class="value">Se almacena toda tu información de forma automática y continua en una base de datos SQL. Así, aunque tu computador falle o se borre algo por error, tus datos siempre estarán protegidos y listos para recuperarse en minutos.</div>
+                <div class="value">Los datos del usuario se almacenan de forma automática y continua en una base de datos SQL, garantizando el respaldo y la recuperación de la información ante fallos del sistema</div>
             </div>
             <div class="card-box">
                 <div class="label">Mantenimiento y Cuidado</div>
-                <div class="value">Cada quince días se realiza mantenimiento y optimización de la base de datos para que tus búsquedas sean rápidas, actualizamos el sistema con las últimas mejoras de seguridad y limpiamos los archivos basura acumulados para mantener el servidor ligero y eficiente</div>
+                <div class="value">Cada quince días se realiza mantenimiento y optimización de la base de datos para que las búsquedas sean rápidas, actualizamos el sistema con las últimas mejoras de seguridad y limpiamos los archivos basura acumulados para mantener el servidor ligero y eficiente</div>
             </div>
         </div>
 
