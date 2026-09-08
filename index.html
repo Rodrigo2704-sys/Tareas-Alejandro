@@ -5,303 +5,281 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha Técnica - AhorroU</title>
     <style>
-      body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define la tipografía principal que usará todo el documento */
-    background-color: #022c22; /* Color de respaldo por si el degradado de fondo no carga */
-    background-image: /* Crea un fondo moderno tipo 'Mesh Gradient' combinando luces difuminadas y un degradado lineal */
-        radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.4) 0px, transparent 50%),
-        radial-gradient(at 90% 80%, rgba(5, 150, 105, 0.35) 0px, transparent 50%),
-        radial-gradient(at 50% 50%, rgba(4, 120, 87, 0.3) 0px, transparent 70%),
-        linear-gradient(135deg, #022c22 0%, #064e3b 50%, #022c22 100%);
-    background-attachment: fixed; /* Mantiene el fondo estático en la pantalla aunque el usuario haga scroll */
-    color: #1e293b; /* Establece el color de texto general por defecto en un gris oscuro legible */
-    margin: 0; /* Elimina los márgenes predeterminados que el navegador le pone al body */
-    padding: 30px; /* Agrega un espacio de relleno alrededor de toda la página */
-    min-height: 100vh; /* Asegura que el cuerpo de la página ocupe al menos toda la altura de la pantalla */
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #c8e6c9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #222222;
+        }
 
-.sheet {
-    max-width: 950px; /* Limita el ancho máximo que puede tener la hoja central de la ficha */
-    margin: 0 auto; /* Centra automáticamente la hoja de forma horizontal en la pantalla */
-    background: #ffffff; /* Pinta el fondo de la hoja principal de color blanco puro */
-    border-radius: 16px; /* Redondea las esquinas de la hoja contenedora */
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(52, 211, 153, 0.4); /* Añade una sombra profunda y un borde sutil brillante */
-    overflow: hidden; /* Oculta cualquier contenido que se salga de los bordes redondeados */
-    position: relative; /* Permite posicionar elementos hijos de forma absoluta respecto a esta caja */
-}
+        .ficha {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #4caf50;
+        }
 
-.sheet::before {
-    content: ''; /* Crea un elemento vacío obligatorio para que funcione el pseudoelemento */
-    display: block; /* Hace que se comporte como un bloque que ocupa todo el ancho */
-    height: 8px; /* Define el grosor de la barra superior decorativa */
-    background: linear-gradient(90deg, #10b981, #34d399, #059669, #6ee7b7); /* Pinta la barra con un degradado lineal de varios tonos verdes */
-}
+        .header {
+            background: #ffffff;
+            padding: 22px 30px;
+            border-bottom: 2px solid #4caf50;
+            text-align: center;
+        }
 
-.header {
-    background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%); /* Coloca un fondo con un degradado verde muy suave en la cabecera */
-    padding: 30px; /* Añade espacio interno alrededor del título de la cabecera */
-    border-bottom: 3px solid #10b981; /* Dibuja una línea divisoria verde fuerte en la parte inferior de la cabecera */
-    text-align: center; /* Centra horizontalmente el texto dentro de la cabecera */
-}
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2e7d32;
+        }
 
-.header h1 {
-    margin: 0; /* Elimina los márgenes predeterminados del título */
-    font-size: 24px; /* Define el tamaño de letra grande para el título principal */
-    font-weight: 800; /* Hace que la letra tenga un grosor muy marcado (extragruesa) */
-    color: #064e3b; /* Establece un color verde muy oscuro y elegante para el texto */
-    letter-spacing: 0.5px; /* Separa ligeramente los caracteres para mejorar la estética */
-    text-transform: uppercase; /* Convierte todo el texto del título a mayúsculas */
-}
+        .contenido {
+            padding: 28px 30px;
+            background: #ffffff;
+        }
 
-.content {
-    padding: 30px; /* Añade un margen interno para separar el contenido de los bordes de la tarjeta */
-    background: #f8fafc; /* Da un color de fondo gris muy claro y sutil a toda la zona interna */
-}
+        .seccion {
+            margin-bottom: 24px;
+        }
 
-.section-title {
-    font-size: 13px; /* Define un tamaño de letra pequeño para los títulos de sección */
-    text-transform: uppercase; /* Fuerza a que el texto aparezca completamente en mayúsculas */
-    letter-spacing: 1px; /* Espacia un poco más las letras para dar estilo de subtítulo técnico */
-    color: #047857; /* Pinta el texto de un tono verde esmeralda llamativo */
-    font-weight: 800; /* Aplica una negrita muy fuerte al texto del título */
-    margin: 30px 0 12px 0; /* Controla la separación exterior (arriba, derecha, abajo, izquierda) */
-    border-bottom: 2px solid #10b981; /* Agrega una línea verde debajo del título de la sección */
-    padding-bottom: 6px; /* Separa el texto de la línea inferior */
-    display: flex; /* Actuelve el modelo flexible para alinear elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos internos del título */
-    gap: 8px; /* Deja un espacio de separación entre los elementos flexibles */
-}
+        .seccion-titulo {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #2e7d32;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid #66bb6a;
+            padding-bottom: 5px;
+            margin-bottom: 11px;
+        }
 
-.section-title:first-child {
-    margin-top: 0; /* Quita el margen superior únicamente al primer título de toda la página */
-}
+        .tabla-datos {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-.grid-container {
-    display: grid; /* Activa el diseño de cuadrícula (CSS Grid) para organizar las tarjetas */
-    grid-template-columns: repeat(2, 1fr); /* Divide la cuadrícula exactamente en dos columnas iguales */
-    gap: 14px; /* Establece la distancia de separación entre una tarjeta y otra */
-    margin-bottom: 15px; /* Deja un espacio inferior antes de la siguiente sección */
-}
+        .tabla-datos th, 
+        .tabla-datos td {
+            border: 1px solid #e0e0e0;
+            padding: 9px 12px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 13px;
+            background-color: #ffffff;
+        }
 
-.grid-container.full-width {
-    grid-template-columns: 1fr; /* Modifica la cuadrícula para que use una sola columna que ocupe todo el ancho */
-}
+        .tabla-datos th {
+            color: #333333;
+            font-weight: 700;
+            width: 27%;
+            font-size: 12px;
+            text-transform: uppercase;
+            background-color: #ffffff;
+        }
 
-.card-box {
-    background: #ffffff; /* Pinta el fondo de cada tarjeta individual de color blanco */
-    border: 2px solid #a7f3d0; /* Dibuja un borde fino de color verde claro alrededor de la tarjeta */
-    border-left: 2px solid #059669; /* Hace que el borde izquierdo sea un poco más oscuro para dar profundidad */
-    border-radius: 8px; /* Redondea levemente las esquinas de la tarjeta */
-    padding: 16px; /* Añade espacio interno para que el texto no pegue de los bordes */
-    display: flex; /* Convierte la tarjeta en un contenedor flexible */
-    flex-direction: column; /* Organiza los elementos internos de arriba hacia abajo (en columna) */
-    justify-content: flex-start; /* Alinea los elementos internos hacia la parte superior */
-    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.05); /* Aplica una sombra verde muy tenue para darle relieve */
-    transition: all 0.2s ease-in-out; /* Hace que los cambios de diseño al pasar el ratón ocurran de forma fluida */
-}
+        .subtitulo-tabla {
+            background-color: #ffffff !important;
+            color: #2e7d32 !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            font-size: 11px !important;
+            text-align: center !important;
+        }
 
-.card-box:hover {
-    transform: translateY(-2px); /* Mueve la tarjeta 2 píxeles hacia arriba al pasar el cursor por encima */
-    border-color: #059669; /* Cambia el color del borde a uno más oscuro cuando el mouse está encima */
-    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.12); /* Amplía e intensifica la sombra simulando que la tarjeta se eleva */
-}
+        .url-version-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
 
-.card-box.span-two {
-    grid-column: span 2; /* Hace que una tarjeta específica se estire abarcando las dos columnas de la grilla */
-}
+        .enlace-web {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-.sub-group-title {
-    grid-column: span 2; /* Extiende el subtítulo interno para que ocupe las dos columnas de la grilla */
-    background: #ecfdf5; /* Pinta el fondo de un tono verde extremadamente claro */
-    color: #064e3b; /* Cambia el color del texto a un verde muy oscuro */
-    font-size: 12px; /* Define un tamaño de letra pequeño */
-    font-weight: 800; /* Aplica una negrita muy fuerte */
-    text-transform: uppercase; /* Vuelve el texto de los subtítulos completamente en mayúsculas */
-    padding: 10px 14px; /* Añade relleno interno al subtítulo */
-    border: 2px solid #34d399; /* Dibuja un borde verde claro alrededor del subtítulo */
-    border-radius: 6px; /* Redondea las esquinas del cuadro del subtítulo */
-    margin-top: 10px; /* Deja un espacio de separación en la parte superior */
-    letter-spacing: 0.5px; /* Separa ligeramente las letras */
-}
+        .enlace-web:hover {
+            text-decoration: underline;
+        }
 
-.label {
-    font-size: 11px; /* Define un tamaño de letra muy pequeño para las etiquetas de los campos */
-    font-weight: 800; /* Coloca la etiqueta en negrita fuerte para que destaque */
-    color: #047857; /* Pinta el texto de la etiqueta en color verde esmeralda */
-    text-transform: uppercase; /* Pone la etiqueta completamente en mayúsculas */
-    margin-bottom: 6px; /* Deja un pequeño espacio debajo de la etiqueta antes del valor */
-    letter-spacing: 0.5px; /* Espacia un poco los caracteres de la etiqueta */
-}
+        .version-badge {
+            font-size: 12px;
+            color: #555555;
+        }
 
-.value {
-    font-size: 13px; /* Establece un tamaño de letra estándar y cómodo para el texto descriptivo */
-    color: #1e293b; /* Pinta el texto de un color gris oscuro para facilitar la lectura */
-    line-height: 1.5; /* Aumenta la altura entre líneas de texto para que no se vean amontonadas */
-}
+        ul {
+            margin: 0;
+            padding-left: 16px;
+        }
 
-ul {
-    margin: 0; /* Elimina el margen exterior por defecto de las listas */
-    padding-left: 18px; /* Añade un espacio a la izquierda para acomodar las viñetas de la lista */
-}
+        li {
+            margin-bottom: 2px;
+        }
 
-li {
-    margin-bottom: 4px; /* Separa cada elemento de la lista ligeramente del siguiente hacia abajo */
-}
-
-code {
-    background: #ecfdf5; /* Pinta el fondo del código con un verde muy suave y claro */
-    padding: 3px 8px; /* Añade espacio interno alrededor del texto de código */
-    border-radius: 4px; /* Redondea ligeramente las esquinas de la caja de código */
-    font-family: monospace; /* Cambia la tipografía a una fuente de tipo consola/máquina de escribir */
-    color: #047857; /* Pinta el texto del código en un color verde oscuro */
-    font-size: 12px; /* Define un tamaño de letra ligeramente más pequeño para el código */
-    border: 1px solid #34d399; /* Dibuja un borde fino alrededor del texto de código */
-    font-weight: 600; /* Pone el texto de código semi-negrita para mejor visibilidad */
-}
-
-.footer {
-    background: #f1f5f9; /* Pinta el fondo del pie de página de un color gris claro */
-    padding: 15px 30px; /* Añade espacio interno arriba, abajo y a los lados del pie de página */
-    text-align: center; /* Centra horizontalmente el texto del pie de página */
-    font-size: 12px; /* Define un tamaño de letra pequeño para los datos del pie */
-    color: #64748b; /* Pinta el texto en un gris intermedio suave */
-    border-top: 2px solid #cbd5e1; /* Dibuja una línea divisoria en la parte superior del pie */
-}
-
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Cambia la estructura de dos columnas a una sola cuando la pantalla es pequeña (móvil) */
-    }
-    .card-box.span-two, .sub-group-title {
-        grid-column: span 1; /* Obliga a los elementos que abarcaban dos columnas a ocupar solo una en móviles */
-    }
-    body {
-        padding: 15px; /* Reduce los márgenes exteriores generales de la página para aprovechar la pantalla del celular */
-    }
-}
+        @media (max-width: 700px) {
+            .tabla-datos th, 
+            .tabla-datos td {
+                display: block;
+                width: 100%;
+            }
+            .tabla-datos th {
+                border-bottom: none;
+            }
+            .url-version-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            body {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="sheet">
-    
+<div class="ficha">
+
     <div class="header">
         <h1>Ficha Técnica del Software</h1>
     </div>
 
-    <div class="content">
-        
+    <div class="contenido">
+
         <!-- 1. IDENTIFICACIÓN -->
-        <div class="section-title">1. Producto:</div>
-        <div class="grid-container">
-            <div class="card-box">
-                <div class="label">Nombre del Producto</div>
-                <div class="value">Aplicativo Web de Ahorro y Finanzas para Estudiantes Universitarios </div>
-            </div>
-            <div class="card-box">
-                <div class="label">URL y Versión</div>
-                <div class="value"><code>https://www.ahorrou-app.net</code><br><b>Versión:</b> 1.0</div>
-            </div>
+        <div class="seccion">
+            <div class="seccion-titulo">1. Identificación del Producto</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Nombre del Producto</th>
+                    <td>Aplicativo Web de Ahorro y Finanzas para Estudiantes Universitarios</td>
+                </tr>
+                <tr>
+                    <th>URL</th>
+                    <td>
+                        <div class="url-version-container">
+                            <a href="https://www.ahorrou-app.net" target="_blank" class="enlace-web">https://www.ahorrou-app.net</a>
+                            <span class="version-badge">Versión: 1.0</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <!-- 2. DESCRIPCIÓN -->
-        <div class="section-title">2. Descripción del Producto:</div>
-        <div class="grid-container">
-            <div class="card-box">
-                <div class="label">Objetivo y Descripción del producto:</div>
-                <div class="value">Sistema web diseñado para que los estudiantes universitarios gestionen sus finanzas personales, registrando ingresos y gastos diarios para mantener su estabilidad económica </div>
-            </div>
-            <div class="card-box">
-                <div class="label">Beneficio:</div>
-                <div class="value">Fomenta el hábito del ahorro, previene crisis financieras a mitad de semestre y facilita reportes claros de gastos innecesarios.</div>
-            </div>
+        <div class="seccion">
+            <div class="seccion-titulo">2. Descripción del Producto</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Objetivo del Sistema</th>
+                    <td>Sistema web diseñado para que los estudiantes universitarios gestionen sus finanzas personales, registrando ingresos y gastos diarios para mantener su estabilidad económica.</td>
+                </tr>
+                <tr>
+                    <th>Beneficio Principal</th>
+                    <td>Fomenta el hábito del ahorro, previene crisis financieras a mitad de semestre y facilita reportes claros de gastos innecesarios.</td>
+                </tr>
+            </table>
         </div>
 
         <!-- 3. ESPECIFICACIONES TÉCNICAS -->
-        <div class="section-title">3. Especificaciones Técnicas:</div>
-        <div class="grid-container">
-            <div class="sub-group-title">Requisitos del sistema (servidor):</div>
-            <div class="card-box">
-                <div class="label">Hardware</div>
-                <div class="value">Procesador compatible, mínimo 2 GB de RAM y almacenamiento adaptable en nube o local.</div>
-            </div>
-            <div class="card-box">
-                <div class="label">Software y Rendimiento:</div>
-                <div class="value">Servidor web configurado para ejecutar el backend en Python, garantizando tiempos de respuesta menores a 2 segundos por consulta.</div>
-            </div>
-            <div class="card-box span-two">
-                <div class="label">Lenguajes de programacion utilizados:</div>
-                <div class="value">Python / JavaScript / SQL</div>
-            </div>
-
-            <div class="sub-group-title">Requisitos del sistema (cliente):</div>
-            <div class="card-box">
-                <div class="label">Hardware:</div>
-                <div class="value">Compatible con cualquier PC, portátil o dispositivo móvil con conexión a red inalámbrica.</div>
-            </div>
-            <div class="card-box">
-                <div class="label">Software Requerido:</div>
-                <div class="value">Navegador web moderno y actualizado como Google Chrome, Firefox, Microsoft Edge, Safari</div>
-            </div>
+        <div class="seccion">
+            <div class="seccion-titulo">3. Especificaciones Técnicas</div>
+            <table class="tabla-datos">
+                <tr>
+                    <td colspan="2" class="subtitulo-tabla">Requisitos del Sistema (Servidor)</td>
+                </tr>
+                <tr>
+                    <th>Hardware</th>
+                    <td>Procesador compatible, mínimo 2 GB de RAM y almacenamiento adaptable en nube o local.</td>
+                </tr>
+                <tr>
+                    <th>Software y Rendimiento</th>
+                    <td>Servidor web configurado para ejecutar el backend en Python, garantizando tiempos de respuesta menores a 2 segundos por consulta.</td>
+                </tr>
+                <tr>
+                    <th>Lenguajes de programacion utilizados</th>
+                    <td>Python / JavaScript / SQL</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="subtitulo-tabla">Requisitos del Sistema (Cliente)</td>
+                </tr>
+                <tr>
+                    <th>Hardware</th>
+                    <td>Compatible con cualquier PC, portátil o dispositivo móvil con conexión a red inalámbrica.</td>
+                </tr>
+                <tr>
+                    <th>Software Requerido</th>
+                    <td>Navegador web moderno y actualizado como Google Chrome, Firefox, Microsoft Edge, Safari</td>
+                </tr>
+            </table>
         </div>
 
-        <!-- 4. COMPONENTES Y MÓDULOS -->
-        <div class="section-title">4. Componentes y Módulos Principales:</div>
-        <div class="grid-container">
-            <div class="card-box">
-                <div class="label">Módulos del Software:</div>
-                <div class="value">
-                    <ul>
-                        <li><b>Autenticación:</b> Perfiles y seguridad:</li>
-                        <li><b>Registro:</b> Ingresos y egresos (Frontend).</li>
-                        <li><b>Procesamiento:</b> Lógica y balances (Backend).</li>
-                        <li><b>Base de Datos:</b> SQL</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card-box">
-                <div class="label">Accesorios Adicionales:</div>
-                <div class="value">Panel de estadísticas gráficas y opción de exportar los reportes a formato CSV/PDF para análisis financiero avanzado del estudiante.</div>
-            </div>
+        <!-- 4. COMPONENTES -->
+        <div class="seccion">
+            <div class="seccion-titulo">4. Componentes y Módulos Principales</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Modulos del Software</th>
+                    <td>
+                        <ul>
+                            <li><strong>Autenticación:</strong> Perfiles y seguridad</li>
+                            <li><strong>Registro:</strong> Ingresos y egresos (Frontend)</li>
+                            <li><strong>Procesamiento:</strong> Lógica y balances (Backend)</li>
+                            <li><strong>Base de Datos:</strong> SQL</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Herramientas Adicionales</th>
+                    <td>Panel de estadísticas gráficas y opción de exportar los reportes a formato CSV/PDF para análisis financiero avanzado del estudiante.</td>
+                </tr>
+            </table>
         </div>
 
-        <!-- 5. INSTRUCCIONES DE USO Y MONTAJE -->
-        <div class="section-title">5. Instrucciones de Uso y Montaje:</div>
-        <div class="grid-container">
-            <div class="card-box">
-                <div class="label">Guia de instalación:</div>
-                <div class="value">Subir los archivos fuente al servidor web configurado, importar el script SQL de la base de datos y ajustar las variables de conexión.</div>
-            </div>
-            <div class="card-box">
-                <div class="label">Instrucciones de Uso</div>
-                <div class="value">El estudiante ingresa a la plataforma mediante credenciales, registra su capital inicial y actualiza diariamente sus transacciones.</div>
-            </div>
+        <!-- 5. INSTRUCCIONES -->
+        <div class="seccion">
+            <div class="seccion-titulo">5. Instrucciones de Uso y Montaje</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Guía de Instalacion</th>
+                    <td>Subir los archivos fuente al servidor web configurado, importar el script SQL de la base de datos y ajustar las variables de conexión.</td>
+                </tr>
+                <tr>
+                    <th>Instrucciones de Uso</th>
+                    <td>El estudiante ingresa a la plataforma mediante credenciales, registra su capital inicial y actualiza diariamente sus transacciones.</td>
+                </tr>
+            </table>
         </div>
 
-        <!-- 6. ALMACENAMIENTO Y MANTENIMIENTO -->
-        <div class="section-title">6. Almacenamiento y Mantenimiento</div>
-        <div class="grid-container">
-            <div class="card-box">
-                <div class="label">Almacenamiento de Datos</div>
-                <div class="value">Los datos del usuario se almacenan de forma automática y continua en una base de datos SQL, garantizando el respaldo y la recuperación de la información ante fallos del sistema</div>
-            </div>
-            <div class="card-box">
-                <div class="label">Mantenimiento y Cuidado</div>
-                <div class="value">Cada quince días se realiza mantenimiento y optimización de la base de datos para que las búsquedas sean rápidas, actualizamos el sistema con las últimas mejoras de seguridad y limpiamos los archivos basura acumulados para mantener el servidor ligero y eficiente</div>
-            </div>
+        <!-- 6. ALMACENAMIENTO -->
+        <div class="seccion">
+            <div class="seccion-titulo">6. Almacenamiento y Mantenimiento</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Almacenamiento de Datos</th>
+                    <td>Los datos del usuario se almacenan de forma automática y continua en una base de datos SQL, garantizando el respaldo y la recuperación de la información ante fallos del sistema.</td>
+                </tr>
+                <tr>
+                    <th>Mantenimiento</th>
+                    <td>Cada quince días se realiza mantenimiento y optimización de la base de datos para que las búsquedas sean rápidas, actualizamos el sistema con las últimas mejoras de seguridad y limpiamos los archivos basura acumulados para mantener el servidor ligero y eficiente.</td>
+                </tr>
+            </table>
         </div>
 
-        <!-- 7. NORMAS Y CERTIFICACIONES -->
-        <div class="section-title">7. Normas y Certificaciones</div>
-        <div class="grid-container full-width">
-            <div class="card-box">
-                <div class="value">Desarrollado aplicando buenas prácticas de programación, control de versiones con Git y normas básicas de seguridad web para proteger los datos de los usuarios.</div>
-            </div>
+        <!-- 7. NORMAS -->
+        <div class="seccion">
+            <div class="seccion-titulo">7. Normas y Certificaciones</div>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Estandares Aplicados</th>
+                    <td>Desarrollado aplicando buenas prácticas de programación, control de versiones con Git y normas básicas de seguridad web para proteger los datos de los usuarios.</td>
+                </tr>
+            </table>
         </div>
 
     </div>
-
 </div>
 
 </body>
-</html>
